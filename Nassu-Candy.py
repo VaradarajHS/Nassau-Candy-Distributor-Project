@@ -56,10 +56,7 @@ st.markdown(
 @st.cache_data
 def load_data():
 
-    # Automatically find the Downloads folder on your Mac
-    downloads_folder = Path.home() / "Downloads"
-
-    file_path = downloads_folder / "Nassau Candy Distributor.csv"
+    file_path = Path("Nassau Candy Distributor.csv")
 
     if not file_path.exists():
         raise FileNotFoundError(
